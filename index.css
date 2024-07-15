@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  height: 70px;
+}
+
+.home {
+  height: 100dvh;
+}
