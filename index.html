@@ -17,17 +17,63 @@
 		<header class="headroom headroom--unpinned">
 			<img src="./assets/logoEN.png" class="logo" />
 			<nav class="nav">
-				<div>Services</div>
-				<div>About us</div>
-				<div>Investors</div>
-				<div>Feedback</div>
-				<div>Contacts</div>
+				<div data-section="home">Home</div>
+				<div data-section="services">Services</div>
+				<div data-section="about">About us</div>
+				<div data-section="investors">Investors</div>
+				<div data-section="feedback">Feedback</div>
+				<div data-section="contacts">Contacts</div>
 			</nav>
 		</header>
+
 		<main>
-			<div class="home"></div>
+			<section id="home" class="section active">
+				<canvas id="home-bg"></canvas>
+				<div class="content">
+					<h1>Ainera</h1>
+					<p>Revolutionizing AI solutions for a smarter tomorrow</p>
+				</div>
+			</section>
+
+			<section id="services" class="section">
+				<div class="content">
+					<h2>Our Services</h2>
+					<p>Your services content here</p>
+				</div>
+			</section>
+
+			<section id="about" class="section">
+				<div class="content">
+					<h2>About Us</h2>
+					<p>Your about content here</p>
+				</div>
+			</section>
+
+			<section id="investors" class="section">
+				<div class="content">
+					<h2>Investors</h2>
+					<p>Your investors content here</p>
+				</div>
+			</section>
+
+			<section id="feedback" class="section">
+				<div class="content">
+					<h2>Feedback</h2>
+					<p>Your feedback content here</p>
+				</div>
+			</section>
+
+			<section id="contacts" class="section">
+				<div class="content">
+					<h2>Contact Us</h2>
+					<p>Your contact information here</p>
+				</div>
+			</section>
 		</main>
 	</body>
+	<script src="https://unpkg.com/headroom.js"></script>
+	<script src="./scripts/background-animation.js"></script>
+	<script src="./scripts/scroll.js"></script>
 	<script>
 		var myElement = document.querySelector('header')
 		var headroom = new Headroom(myElement)
