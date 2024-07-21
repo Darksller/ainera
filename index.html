@@ -9,8 +9,13 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="./index.css" />
+		<link rel="stylesheet" href="./styles/main.css" />
+		<link rel="stylesheet" href="./styles/about.css" />
 		<script src="https://unpkg.com/headroom.js"></script>
+		<script
+			type="module"
+			src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
+		></script>
 		<title>Ainera</title>
 	</head>
 	<body>
@@ -31,21 +36,104 @@
 				<canvas id="home-bg"></canvas>
 				<div class="content">
 					<h1>Ainera</h1>
-					<p>Revolutionizing AI solutions for a smarter tomorrow</p>
+					<p>
+						Revolutionizing software development solutions for a smarter
+						tomorrow
+					</p>
 				</div>
 			</section>
 
 			<section id="services" class="section">
 				<div class="content">
 					<h2>Our Services</h2>
-					<p>Your services content here</p>
+					<div id="unity-container" class="unity-desktop">
+						<canvas id="unity-canvas" tabindex="-1"></canvas>
+						<div id="unity-loading-bar">
+							<div id="unity-progress-bar-empty">
+								<div id="unity-progress-bar-full"></div>
+							</div>
+						</div>
+						<div id="unity-warning"></div>
+						<div id="unity-footer">
+							<div id="unity-webgl-logo"></div>
+							<div id="unity-fullscreen-button"></div>
+						</div>
+					</div>
 				</div>
 			</section>
 
 			<section id="about" class="section">
 				<div class="content">
 					<h2>About Us</h2>
-					<p>Your about content here</p>
+					<details>
+						<summary>
+							<h3>Are you having difficulties with your web page?</h3>
+						</summary>
+						<p>
+							Is the performance of your web page not up to the standards that
+							you desire? If so, Ainera is your one-stop IT problem solver.
+						</p>
+					</details>
+					<div class="separator" />
+					<details>
+						<summary>
+							<h3>
+								Our dedicated development team will solve any problems that you
+								are encountering.
+							</h3>
+						</summary>
+						<p>
+							Our team has accumulated a massive experience in building high
+							load systems that deal with a big volume of server requests. We
+							thoroughly design software architectures to optimize the
+							performance of websites with a large number of daily visitors and
+							computations. Efficiency, scalability, and reliability are the
+							prime features of the high-load systems we develop.
+						</p>
+					</details>
+					<div class="separator" />
+					<details>
+						<summary>
+							<h3>Our services can ease the management of your business.</h3>
+						</summary>
+						<p>
+							Over the years we have acquired broad technological expertise.
+							This allows us to offer the development of additional solutions
+							and technologies. We deliver website user experiences, mobile
+							applications, data management solutions, and cloud platforms,
+							optimized for high-load environments.
+						</p>
+					</details>
+					<div class="separator" />
+					<h3>Explore our outsourced testing services</h3>
+					<details>
+						<summary>
+							<h3>By choosing us you are saving money for your business.</h3>
+						</summary>
+						<p>
+							Our QA teams deliver comprehensive and fully managed outsourced
+							testing services from Ainera development centers in Lithuania. We
+							guide enterprises through the entire testing lifecycle,
+							substantially reducing downtime costs.
+						</p>
+					</details>
+					<div class="separator" />
+					<details>
+						<summary>
+							<h3>
+								Our company values all of its customers and we always aim to
+								bring high-quality solutions and results.
+							</h3>
+						</summary>
+						<p>
+							We help businesses effectively handle the peak loads of any
+							software development project. Furthermore, Ainera quickly scales
+							outsourced dedicated software testing teams, adding extra tester
+							resources in a matter of weeks. Here at Ainera, we love what we do
+							and we always strive for excellence.
+						</p>
+					</details>
+					<div class="separator" />
 				</div>
 			</section>
 
@@ -53,6 +141,12 @@
 				<div class="content">
 					<h2>Investors</h2>
 					<p>Your investors content here</p>
+					<model-viewer
+						alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
+						src="assets/q.glb"
+						shadow-intensity="1"
+						camera-controls
+					></model-viewer>
 				</div>
 			</section>
 
@@ -74,6 +168,7 @@
 	<script src="https://unpkg.com/headroom.js"></script>
 	<script src="./scripts/background-animation.js"></script>
 	<script src="./scripts/scroll.js"></script>
+	<script src="./scripts/fortinite.js"></script>
 	<script>
 		var myElement = document.querySelector('header')
 		var headroom = new Headroom(myElement)
