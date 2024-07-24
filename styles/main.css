@@ -139,22 +139,22 @@ h1 {
 h2 {
   font-size: 4rem;
   font-weight: 600;
-  margin-bottom: 1rem;
   color: var(--primary-color);
 }
 
 h3 {
   font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 1rem;
   color: var(--primary-color);
+}
+
+#home p {
+  margin: 0 auto;
 }
 
 p {
   font-size: 1.5rem;
   font-weight: 300;
-  max-width: 1000px;
-  margin: 0 auto;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -183,10 +183,4 @@ p {
   p {
     font-size: 1.2rem;
   }
-}
-
-
-.separator {
-  width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.8);
 }
