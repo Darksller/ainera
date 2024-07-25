@@ -65,13 +65,16 @@ if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
 	// To lower canvas resolution on mobile devices to gain some
 	// performance, uncomment the following line:
 	config.devicePixelRatio = 1
-	canvas.style.height = '560px'
-	canvas.style.width = '350px'
+	canvas.style.height = '400px'
+	canvas.style.width = '300px'
+	canvas.style.borderRadius = '0px'
 } else {
 	// Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-	canvas.style.width = '1360px'
-	canvas.style.height = '720px'
+	// canvas.style.width = '1360px'
+	// canvas.style.height = '720px'
+	canvas.style.width = '960px'
+	canvas.style.height = '600px'
 }
 
 loadingBar.style.display = 'block'
@@ -87,10 +90,31 @@ script.onload = () => {
 			fullscreenButton.onclick = () => {
 				unityInstance.SetFullscreen(1)
 			}
+
+			// Add event listener for scroll events on the canvas
+			canvas.addEventListener('wheel', handleCanvasScroll, { passive: false })
 		})
 		.catch(message => {
 			alert(message)
 		})
+}
+
+function handleCanvasScroll(event) {
+	// Prevent the default scroll behavior on the canvas
+	event.preventDefault()
+
+	// Calculate the amount to scroll
+	var delta = event.deltaY || event.detail || event.wheelDelta
+
+	// Increase the scroll speed by multiplying delta
+	var scrollSpeed = 2.5 // Adjust this value to increase or decrease scroll speed
+	delta *= scrollSpeed
+
+	// Scroll the window
+	window.scrollBy({
+		top: delta,
+		behavior: 'auto', // Use 'auto' for immediate scrolling without smooth animation
+	})
 }
 
 document.body.appendChild(script)

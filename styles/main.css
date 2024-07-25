@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 html {
@@ -100,6 +101,11 @@ main {
   transition: opacity 0.5s ease;
 }
 
+.section:not(.active) {
+  opacity: 0.5;
+  /* Adjust this value to control the visibility of inactive sections */
+}
+
 .section.active {
   opacity: 1;
 }
@@ -183,4 +189,9 @@ p {
   p {
     font-size: 1.2rem;
   }
+}
+
+
+#services {
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
 }

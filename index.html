@@ -11,6 +11,10 @@
 		/>
 		<link rel="stylesheet" href="./styles/main.css" />
 		<link rel="stylesheet" href="./styles/about.css" />
+		<link rel="stylesheet" href="./styles/services.css" />
+		<link rel="stylesheet" href="./styles/investors.css" />
+		<link rel="stylesheet" href="./styles/feedback.css" />
+		<link rel="stylesheet" href="./styles/contacts.css" />
 		<script src="https://unpkg.com/headroom.js"></script>
 		<script
 			type="module"
@@ -63,7 +67,7 @@
 			</section>
 
 			<section id="about" class="section">
-				<div class="content">
+				<div class="content" style="margin-bottom: 2rem">
 					<h2>About Us</h2>
 				</div>
 				<div class="details">
@@ -178,21 +182,137 @@
 
 			<section id="investors" class="section">
 				<div class="content">
-					<h2>Investors</h2>
-					<p>Your investors content here</p>
-					<model-viewer
-						alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
-						src="assets/q.glb"
-						shadow-intensity="1"
-						camera-controls
-					></model-viewer>
+					<div class="investors-container">
+						<div class="investors-head">
+							<div class="inv">
+								<h2 class="interactive-text" data-hover-text="investors">
+									Investors
+								</h2>
+								<model-viewer
+									class="coin-model"
+									src="assets/monetka.glb"
+									shadow-intensity="1"
+									auto-rotate
+									rotation-per-second="30deg"
+									interaction-prompt="none"
+								></model-viewer>
+							</div>
+							<div class="inv">
+								<h2 class="interactive-text" data-hover-text="partners">
+									Let's become partners
+								</h2>
+								<model-viewer
+									class="coin-model"
+									src="assets/monetka.glb"
+									shadow-intensity="1"
+									auto-rotate
+									rotation-per-second="30deg"
+									interaction-prompt="none"
+								></model-viewer>
+							</div>
+						</div>
+						<div class="hover-text-container">
+							<div id="investors-text" class="hover-text">
+								<h3>Interested in investing? Get in touch</h3>
+								<p>
+									Shareholders, financial analysts, bank representatives,
+									brokerage firms and other investment professionals may address
+									investor specific inquiries directly to: Email:
+									investors@ainera.com
+								</p>
+							</div>
+							<div id="partners-text" class="hover-text">
+								<h3>
+									We are always looking for long-term B2B development
+									opportunities and collaborations worldwide. We are looking for
+									IT partners in the following areas:
+								</h3>
+								<ul>
+									<li>
+										<p><strong>Application development</strong> and design</p>
+									</li>
+									<li>
+										<p>Monitoring and <strong>quality assurance</strong></p>
+									</li>
+									<li>
+										<p>
+											<strong>Development, support and maintenance</strong> of
+											business information software
+										</p>
+									</li>
+									<li>
+										<p>
+											Software
+											<strong>development and maintenance</strong> projects
+										</p>
+									</li>
+								</ul>
+								<h3>
+									If you are a WEB designer do not hesitate to contact us!
+								</h3>
+								<p>
+									We are constantly working on projects that require
+									professional work and we will be happy to offer such services
+									to freelance programmers and designers. For more information
+									contact us and we will get back to you as soon as possible.
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
 			<section id="feedback" class="section">
 				<div class="content">
 					<h2>Feedback</h2>
-					<p>Your feedback content here</p>
+					<div class="slider-container">
+						<div class="slider">
+							<div class="slide">
+								<div class="slide-content">
+									<img
+										src="/assets/feedback/1.jpg"
+										alt="Person 1"
+										class="slide-image"
+									/>
+									<div class="slide-name">Mykhailo</div>
+									<div class="slide-caption">
+										Anyone who needs a PROFESSIONAL should choose this firm!
+									</div>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slide-content">
+									<img
+										src="/assets/feedback/3.jpg"
+										alt="Person 2"
+										class="slide-image"
+									/>
+									<div class="slide-name">Noah</div>
+									<div class="slide-caption">
+										Thank you very much, this team can handle huge
+										responsibilities and still get everything done in time
+										Greetings from Norway!
+									</div>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slide-content">
+									<img
+										src="/assets/feedback/2.jpg"
+										alt="Person 3"
+										class="slide-image"
+									/>
+									<div class="slide-name">Vitalii</div>
+									<div class="slide-caption">
+										The service provided by Ainera was outstanding. The team was
+										extremely helpful and exceeded all my expectations. It was a
+										pleasure doing business with this company.
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slider-nav"></div>
+					</div>
 				</div>
 			</section>
 
@@ -208,6 +328,8 @@
 	<script src="./scripts/background-animation.js"></script>
 	<script src="./scripts/scroll.js"></script>
 	<script src="./scripts/fortinite.js"></script>
+	<script src="./scripts/coins.js"></script>
+	<script src="./scripts/feedback.js"></script>
 	<script>
 		var myElement = document.querySelector('header')
 		var headroom = new Headroom(myElement)

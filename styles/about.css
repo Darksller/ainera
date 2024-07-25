@@ -1,3 +1,4 @@
+/* Существующие стили */
 #about {
   display: flex;
   flex-direction: column;
@@ -8,7 +9,6 @@
 
 .content h2 {
   font-size: 3.5rem;
-  margin-bottom: 2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -97,6 +97,46 @@ details[open] p {
   transition: all 0.3s ease;
 }
 
+/* Новые стили для решения проблемы расширения секций */
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  min-height: 100vh;
+  height: auto;
+  overflow: auto;
+  padding: 5rem 0;
+  box-sizing: border-box;
+}
+
+.section .content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#about {
+  height: auto;
+  min-height: 100vh;
+}
+
+.details {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+details,
+summary {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Медиа-запрос для адаптивности */
 @media (max-width: 768px) {
   .details {
     width: 90%;
@@ -108,5 +148,13 @@ details[open] p {
 
   details p {
     font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section .content {
+    padding: 0 10px;
   }
 }
