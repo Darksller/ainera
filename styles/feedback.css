@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+
   }
 
   .slider-container {
@@ -45,7 +46,6 @@
     transition: all 0.5s ease-in-out;
     cursor: grab;
     transform: rotateY(180deg);
-    /* Flip the entire slide */
   }
 
   .slide:active {

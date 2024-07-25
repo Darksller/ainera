@@ -110,8 +110,13 @@ main {
   opacity: 1;
 }
 
+#contacts {
+  opacity: 1;
+}
+
 #home {
   position: relative;
+  min-height: 100vh;
 }
 
 #home-bg {
@@ -150,6 +155,12 @@ h2 {
 
 h3 {
   font-size: 2rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+h4 {
+  font-size: 1.7rem;
   font-weight: 500;
   color: var(--primary-color);
 }

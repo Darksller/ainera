@@ -105,7 +105,6 @@ main {
 }
 
 .section {
-  min-height: 100vh;
   height: auto;
   overflow: auto;
   padding: 5rem 0;
