@@ -33,6 +33,8 @@
 
 .con-content h4 {
   margin-bottom: 1vw;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(226, 60, 60, 0.5);
 }
 
 .con-content div {
